@@ -1,11 +1,13 @@
 ---
-name: 'USER STORY/EPIC:'
+name: User story
 about: Default user template
 title: ''
 labels: ''
 assignees: ''
 
 ---
+
+USERSTORY/EPIC: 
 
 As a "role" I can "capability" so I can "received benefit".
 
