@@ -31,6 +31,10 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['8000-jahooli4-witchessociety-x0a6hoyeml6.ws.codeinstitute-ide.net','.herokuapp.com']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.codeinstitute-ide.net/',
+    'https://*.herokuapp.com'
+]
 
 # Application definition
 
