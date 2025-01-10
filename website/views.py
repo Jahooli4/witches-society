@@ -5,5 +5,8 @@ from django.contrib import messages
 
 # Create your views here.
 
-def booking_form(request):
-    return render(request, 'booking/booking_form.html')
+def home(request):
+    return render(request, 'website/home.html')
+
+def blog(request):
+    return render(request, 'website/blog.html')
