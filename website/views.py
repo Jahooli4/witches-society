@@ -1,24 +1,9 @@
 from django.shortcuts import render
 from datetime import datetime, timedelta
-from .models import *
+from .models import Post
 from django.contrib import messages
 
 # Create your views here.
-
-posts = [
-    {
-        'author': 'Michelle',
-        'title': 'Blog post 1',
-        'content': 'First post content',
-        'date_posted': 'January 10, 2025',
-    },
-    {
-        'author': 'Catherine',
-        'title': 'Blog post 2',
-        'content': 'Second post content',
-        'date_posted': 'January 15, 2025',
-    }
-]
 
 def home(request):
     return render(request, 'website/home.html', {'title': 'Home'})
@@ -28,6 +13,6 @@ def about(request):
 
 def blog(request):
     context = {
-        'posts': posts
+        'posts': Post.objects.all()
     }
     return render(request, 'website/blog.html', context)
