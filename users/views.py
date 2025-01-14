@@ -10,8 +10,8 @@ def register(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Account created for {username}! Welcome to the Witches Scoiety.')
-            return redirect('website-home')
+            messages.success(request, f'Account successfully created, welcome to the Witches Scoiety! You may now login.')
+            return redirect('login')
     else:
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
