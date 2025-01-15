@@ -1,16 +1,24 @@
 {% extends "website/base.html" %}
+{% load static %}
 {% block content %}
-    {% for post in posts %}
-    <article class="media content-section">
-        <div class="media-body">
-          <div class="article-metadata">
-            <a class="mr-2" href="#">{{ post.author }}</a>
-            <small class="text-muted">{{ post.date_posted|date:"N d, Y" }}</small>
-          </div>
-          <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
-          <p class="article-content">{{ post.content }}</p>
+{% for post in posts %}
+<article class="media content-section">
+  <div class="media-body">
+    <div class="image-container">
+      {% if "placeholder" in post.featured_image.url %}
+      <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+      {% else %}
+      <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+      {% endif %}
+      <div class="image-flash">
+        <div class="article-metadata">
+          <a class="mr-2" href="#">{{ post.author }}</a>
+          <small class="text-muted">{{ post.date_posted|date:"N d, Y" }}</small>
         </div>
-      </article>
+        <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+        <p class="article-content">{{ post.content }}</p>
+      </div>
+</article>
 
-    {% endfor %}
+{% endfor %}
 {% endblock content%}
