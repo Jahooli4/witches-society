@@ -1,4 +1,11 @@
 from django.shortcuts import render
+from django.views.generic import (
+    ListView,
+    DetailView,
+    CreateView,
+    UpdateView,
+    DeleteView
+)
 from datetime import datetime, timedelta
 from .models import Post
 from django.contrib import messages
@@ -16,3 +23,12 @@ def blog(request):
         'posts': Post.objects.all()
     }
     return render(request, 'website/blog.html', context)
+
+class PostListView(ListView):
+    model = Post
+    template_name = 'website/blog.html'
+    context_object_name = 'posts'
+    ordering = ['-date_posted']
+
+class PostDetailView(DetailView):
+    model = Post
