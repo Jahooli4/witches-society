@@ -2,12 +2,7 @@
 {% load static %}
 {% block content %}
 <article class="media content-section">
-  {% if "default" in user.profile.image.url %}
-            <!-- PROFILE IMAGE (default img is displayed if user does not upload their own) -->
-                <img class="rounded-circle account-img" src="{% static 'images/default-profile.jpg' %}" alt="profile picture">
-            {% else %}
-                <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="profile picture">
-            {% endif %}
+  <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
   <div class="media-body">
     <div class="image-container">
       {% if "placeholder" in post.featured_image.url %}
