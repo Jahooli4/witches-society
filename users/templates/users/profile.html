@@ -1,9 +1,17 @@
 {% extends "website/base.html" %}
+{% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="content-section">
     <div class="media">
-        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+        <div id="profile-image-container">
+            {% if "default" in user.profile.image.url %}
+            <!-- PROFILE IMAGE (default img is displayed if user does not upload their own) -->
+                <img class="rounded-circle account-img" src="{{ object.author.profile.image.url }}" alt="profile picture">
+            {% else %}
+                <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="profile picture">
+            {% endif %}
+          </div>
         <div class="media-body">
             <h2 class="account-heading">{{ user.username }}</h2>
             <p class="text-secondary">{{ user.email }}</p>
