@@ -14,9 +14,9 @@
   <div class="media-body">
     <div class="image-container">
       {% if "placeholder" in post.featured_image.url %}
-      <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+      <img class="card-img-top" src="https://res.cloudinary.com/dfm2di4ln/image/upload/v1737287397/placeholder_rrvyx8.jpg" alt="placeholder image">
       {% else %}
-      <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+      <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
       {% endif %}
     </div>
     <div class="article-metadata">
