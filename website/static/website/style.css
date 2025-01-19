@@ -2,15 +2,12 @@ body {
     background: #fafafa;
     color: #333333;
     margin-top: 5rem;
+    min-height: 100vh;
   }
 
 #navigation {
-  background-color: purple;
+  background-color: rgb(153, 62, 80);
 }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: #444444;
-  }
   
   ul {
     margin: 0;
@@ -87,9 +84,12 @@ body {
     font-size: 2.5rem;
   }
 
-  /* Flip card styling */
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+  /* ABOUT PAGE */
 
+  .about-title {
+    font-size: 1.6rem;
+  }
+  /* Flip card styling */
 .flip-card {
   background-color: transparent;
   width: inherit;
@@ -133,4 +133,46 @@ body {
   background-color: rgb(146, 61, 67);
   color: white;
   transform: rotateY(180deg);
+  height: 100%;
+  align-content: space-around;
+  padding: 5px;
+}
+
+/* -------- FOOTER -------- */
+footer {
+  margin-top: auto;
+}
+
+#footer-container {
+  background-color: rgb(153, 62, 80);
+  color: #fff;
+  max-width: 100%;
+  margin-top: 30px;
+}
+
+#footer-container-secondary {
+  padding-bottom: 0!important;
+  max-width: 75%;
+}
+
+#footer-container-last {
+  align-items: center;
+  margin-bottom: 0!important;
+}
+
+.footer-link-heading {
+  font-size: 1.2rem;
+}
+
+#social-icons li {
+  font-size: 2rem;
+  color: #fafafa;
+}
+
+#social-icons li a {
+  color: #fafafa;
+}
+
+#social-icons li a:hover {
+  color: #aaaaaa;
 }

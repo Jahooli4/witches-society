@@ -69,7 +69,49 @@
       </div>
     </div>
   </main>
+<!-- FOOTER -->
+<div class="container" id="footer-container">
+  <footer class="py-5 mx-auto" id="footer-container-secondary">
+      <div class="row">
+          <div class="col-6 col-md-3 mb-3">
+              <p class="footer-link-heading">Site Links</p>
+              <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="{% url 'website-home' %}" class="nav-link-footer p-0 text-body-secondary">Home</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'website-about' %}" class="nav-link-footer p-0 text-body-secondary">About</a></li>
+                  <li class="nav-item mb-2"><a href="{% url 'website-blog' %}" class="nav-link-footer p-0 text-body-secondary">Blog</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link-footer p-0 text-body-secondary">Contact</a></li>
+              </ul>
+          </div>
 
+          <div class="col-6 col-md-3 mb-3">
+              {% if user.is_authenticated %}
+                  <p class="footer-link-heading">My Account</p>
+                  <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="{% url 'profile' %}" class="nav-link-footer p-0 text-body-secondary">My Profile</a></li>
+                      <li class="nav-item mb-2"><a href="{% url 'logout' %}" class="nav-link-footer p-0 text-body-secondary">Logout</a></li>
+                  </ul>
+              {% else %}
+                  <p class="footer-link-heading">Account</p>
+                  <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="{% url 'register' %}" class="nav-link-footer p-0 text-body-secondary">Register</a></li>
+                      <li class="nav-item mb-2"><a href="{% url 'login' %}" class="nav-link-footer p-0 text-body-secondary">Log In</a></li>
+                  </ul>
+              {% endif %}
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+              <ul class="list-unstyled d-flex mx-2" id="social-icons">
+                  <li class="m-3"><a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                  <li class="m-3"><a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                  <li class="m-3"><a href="https://instagram.com/" target="_blank" aria-label="Visit our Instagram page (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a></li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top" id="footer-container-last">
+          <p>&copy; 2025 The Witche Society, All rights reserved.</p>
+      </div>
+  </footer>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
