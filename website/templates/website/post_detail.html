@@ -2,7 +2,12 @@
 {% load static %}
 {% block content %}
 <article class="media content-section">
-  <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+  {% if "default" in post.author.profile.image.url %}
+    <!-- PROFILE IMAGE (default img is displayed if user does not upload their own) -->
+        <img class="rounded-circle account-img" src="https://res.cloudinary.com/dfm2di4ln/image/upload/v1737237533/default-profile_bhs5bd.jpg" alt="profile picture">
+    {% else %}
+        <img class="rounded-circle account-img" src="{{ post.author.profile.image.url }}" alt="profile picture">
+    {% endif %}
   <div class="media-body">
     <div class="image-container">
       {% if "placeholder" in post.featured_image.url %}
