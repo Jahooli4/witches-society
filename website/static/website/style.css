@@ -1,101 +1,105 @@
 body {
-    background: #fafafa;
-    color: #333333;
-    margin-top: 5rem;
-    min-height: 100vh;
-  }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
+main {
+  flex-grow: 1;
+}
 
 #navigation {
   background-color: rgb(153, 62, 80);
 }
-  
-  ul {
-    margin: 0;
-  }
-  
-  .bg-steel {
-    background-color: #5f788a;
-  }
-  
-  .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
-  }
-  
-  .site-header .navbar-nav .nav-link:hover {
-    color: #ffffff;
-  }
-  
-  .site-header .navbar-nav .nav-link.active {
-    font-weight: 500;
-  }
-  
-  .content-section {
-    background: #ffffff;
-    padding: 10px 20px;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-    margin-bottom: 20px;
-  }
-  
-  .article-title {
-    color: #444444;
-  }
-  
-  a.article-title:hover {
-    color: #428bca;
-    text-decoration: none;
-  }
-  
-  .article-content {
-    white-space: pre-line;
-  }
-  
-  .article-img {
-    height: 65px;
-    width: 65px;
-    margin-right: 16px;
-  }
-  
-  .article-metadata {
-    padding-bottom: 1px;
-    margin-bottom: 4px;
-    border-bottom: 1px solid #e3e3e3
-  }
-  
-  .article-metadata a:hover {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .article-svg {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
-  }
-  
-  .account-img {
-    height: 125px;
-    width: 125px;
-    margin-right: 20px;
-    margin-bottom: 16px;
-  }
-  
-  .account-heading {
-    font-size: 2.5rem;
-  }
 
-  /* ABOUT PAGE */
+ul {
+  margin: 0;
+}
 
-  .about-title {
-    font-size: 1.6rem;
-  }
-  /* Flip card styling */
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+/* -------- PAGE TITLES -------- */
+.blog-title, .about-title {
+  font-size: 1.6rem;
+}
+
+/* -------- BLOG PAGE -------- */
+.content-section {
+  background: #f3baba;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: #333333;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+/* -------- ABOUT PAGE -------- */
+
+/* Flip card styling */
 .flip-card {
   background-color: transparent;
   width: inherit;
   height: 400px;
-  /* border: 1px solid #f1f1f1; */
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
+  
 }
 
 /* This container is needed to position the front and back side */
@@ -114,11 +118,13 @@ body {
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: inherit;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
+  /* Safari */
   backface-visibility: hidden;
 }
 
@@ -139,9 +145,6 @@ body {
 }
 
 /* -------- FOOTER -------- */
-footer {
-  margin-top: auto;
-}
 
 #footer-container {
   background-color: rgb(153, 62, 80);
@@ -151,13 +154,13 @@ footer {
 }
 
 #footer-container-secondary {
-  padding-bottom: 0!important;
+  padding-bottom: 0 !important;
   max-width: 75%;
 }
 
 #footer-container-last {
   align-items: center;
-  margin-bottom: 0!important;
+  margin-bottom: 0 !important;
 }
 
 .footer-link-heading {
