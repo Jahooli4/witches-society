@@ -4,8 +4,8 @@ body {
   flex-direction: column;
   background: #fafafa;
   color: #333333;
-  margin-top: 5rem;
 }
+
 main {
   flex-grow: 1;
 }
@@ -41,7 +41,7 @@ ul {
 .slideshow-container {
   max-width: 95%;
   position: relative;
-  margin: auto;
+  margin: 20px auto 0 auto;
 }
 
 /* Hide the images by default */
@@ -50,6 +50,8 @@ ul {
 }
 .mySlides img {
   border-radius: 10px;
+  aspect-ratio: initial;
+  overflow: hidden;
 }
 
 .fade {
@@ -82,6 +84,9 @@ ul {
   border-radius: 10px;
 }
 
+.welcome-text h2 {
+  font-size: medium;
+}
 .welcome-text a {
   text-decoration: none;
   color:rgb(110, 41, 55);
