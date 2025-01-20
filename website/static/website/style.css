@@ -49,15 +49,41 @@ ul {
   display: none;
 }
 
-/* Fading animation */
 .fade {
+  top:0;
+  -webkit-animation-name: fade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
   animation-name: fade;
-  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
 }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+@-webkit-keyframes fade {
+  0% {opacity: .6;}
+  20% {opacity: 1;}
+  33% {opacity: 1;}
+  53% {opacity: 1;}
+  100% {opacity: .5;}
+}
+.welcome-text {
+  color:rgb(153, 62, 80);
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(243, 186, 186, 0.9);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.welcome-text a {
+  text-decoration: none;
+  color:rgb(110, 41, 55);
+}
+.welcome-text a:hover {
+  color: #fafafa;
 }
 
 /* -------- BLOG PAGE -------- */
