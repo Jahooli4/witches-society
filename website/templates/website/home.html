@@ -1,4 +1,27 @@
 {% extends "website/base.html" %}
+{% load static %}
 {% block content %}
-    <h1>Home page</h1>
-{% endblock content%}
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="https://res.cloudinary.com/dfm2di4ln/image/upload/v1737371092/hero-image-1_zvcwfb.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://res.cloudinary.com/dfm2di4ln/image/upload/v1737371204/hero-image-2_wvv1q3.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://res.cloudinary.com/dfm2di4ln/image/upload/v1737371206/hero-image-3_tsklur.jpg" style="width:100%">
+  </div>
+
+</div>
+
+
+{% endblock content %}
+{% block scripts %}
+<!-- JS FOR SLIDESHOW -->
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock scripts %}
