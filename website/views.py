@@ -11,6 +11,7 @@ from django.views.generic import (
 from datetime import datetime, timedelta
 from .models import Post
 from django.contrib import messages
+from django.urls import reverse_lazy
 
 
 # Create your views here.
@@ -60,6 +61,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        messages.success(self.request, 'Your spell has been successfully added to the Grimoire.')
         return super().form_valid(form)
 
 
@@ -69,7 +71,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        messages.success(self.request, "The post was updated successfully")
+        messages.success(self.request, "Your spell was successfully updated")
         return super().form_valid(form)
 
     def test_func(self):
@@ -81,7 +83,10 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
-    success_url = '/'
+    success_url = reverse_lazy('website-blog')
+    success_message = (
+        'Your spell was deleted successfully'
+    )
 
     def test_func(self):
         post = self.get_object()

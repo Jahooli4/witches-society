@@ -202,7 +202,12 @@ a.article-title:hover {
 }
 
 /* -------- PROFILE PAGE -------- */
-
+.profile-content-section {
+  width:30rem;
+  background: #f3baba;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
 #profile-card {
   background-color: #f3baba;
   border:none;
