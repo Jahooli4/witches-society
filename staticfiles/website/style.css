@@ -4,8 +4,8 @@ body {
   flex-direction: column;
   background: #fafafa;
   color: #333333;
-  margin-top: 5rem;
 }
+
 main {
   flex-grow: 1;
 }
@@ -41,12 +41,17 @@ ul {
 .slideshow-container {
   max-width: 95%;
   position: relative;
-  margin: auto;
+  margin: 20px auto 0 auto;
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
+}
+.mySlides img {
+  border-radius: 10px;
+  aspect-ratio: initial;
+  overflow: hidden;
 }
 
 .fade {
@@ -59,13 +64,14 @@ ul {
   animation-duration: 6s;
 }
 
-@-webkit-keyframes fade {
+@keyframes fade {
   0% {opacity: .6;}
   20% {opacity: 1;}
   33% {opacity: 1;}
   53% {opacity: 1;}
   100% {opacity: .5;}
 }
+
 .welcome-text {
   color:rgb(153, 62, 80);
   text-align: center;
@@ -75,9 +81,12 @@ ul {
   transform: translate(-50%, -50%);
   background-color: rgba(243, 186, 186, 0.9);
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
+.welcome-text h2 {
+  font-size: medium;
+}
 .welcome-text a {
   text-decoration: none;
   color:rgb(110, 41, 55);
@@ -138,6 +147,8 @@ a.article-title:hover {
   margin-bottom: 16px;
 }
 
+
+
 .account-heading {
   font-size: 2.5rem;
 }
@@ -181,7 +192,6 @@ a.article-title:hover {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  /* background-color: #bbb; */
   color: black;
 }
 
@@ -192,9 +202,59 @@ a.article-title:hover {
   transform: rotateY(180deg);
   height: 100%;
   align-content: space-around;
-  padding: 5px;
+  width: 80%;
+  margin: 0 10% 0 10%;
 }
 
+.flip-card-back h2 {
+  font-size: 22px;
+
+}
+
+.flip-card-back p {
+  font-size: 14px;
+}
+
+/* -------- PROFILE PAGE -------- */
+.profile-content-section {
+  width:30rem;
+  background: #f3baba;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+#profile-card {
+  background-color: #f3baba;
+  border:none;
+}
+
+#update-form {
+  display: none;
+}
+
+#update-btn:hover {
+  background-color: rgb(146, 61, 67);
+  color: #fafafa;
+}
+
+#submit-btn:hover {
+  background-color: rgb(161, 97, 102);
+  color: #fafafa;
+}
+
+#submit-btn {
+  background-color: rgb(146, 61, 67);
+  color: #fafafa;
+}
+
+
+
+#profile-pic {
+  height: 160px;
+  width: 160px;
+  overflow:hidden;
+  object-fit: cover;
+  margin: auto;
+}
 /* -------- FOOTER -------- */
 
 #footer-container {
