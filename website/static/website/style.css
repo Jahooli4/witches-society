@@ -192,7 +192,6 @@ a.article-title:hover {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  /* background-color: #bbb; */
   color: black;
 }
 
@@ -203,7 +202,17 @@ a.article-title:hover {
   transform: rotateY(180deg);
   height: 100%;
   align-content: space-around;
-  padding: 5px;
+  width: 80%;
+  margin: 0 10% 0 10%;
+}
+
+.flip-card-back h2 {
+  font-size: 22px;
+
+}
+
+.flip-card-back p {
+  font-size: 14px;
 }
 
 /* -------- PROFILE PAGE -------- */
