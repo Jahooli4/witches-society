@@ -12,6 +12,16 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- Custom CSS-->
   <link rel="stylesheet" href="{% static 'website/style.css' %}">
+  <!-- Google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
 
   {% if title %}
   <title> Witches Society - {{ title }}</title>
@@ -24,7 +34,7 @@
   <header class="site-header">
     <nav id="navigation" class="navbar navbar-expand-md navbar-dark sticky-top">
       <div class="container">
-        <a class="navbar-brand mr-4" href="/">Witches Society</a>
+        <a class="navbar-brand irish-grover-regular mr-4" href="/">Witches Society</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
           aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -82,8 +92,7 @@
                 class="nav-link-footer p-0 text-body-secondary">About</a></li>
             <li class="nav-item"><a href="{% url 'website-blog' %}"
                 class="nav-link-footer p-0 text-body-secondary">Blog</a></li>
-            <li class="nav-item"><a href="#"
-                class="nav-link-footer p-0 text-body-secondary">Contact</a></li>
+            <li class="nav-item"><a href="#" class="nav-link-footer p-0 text-body-secondary">Contact</a></li>
           </ul>
         </div>
 
@@ -93,8 +102,8 @@
           <ul class="nav flex-column">
             <li class="nav-item"><a href="{% url 'profile' %}" class="nav-link-footer p-0 text-body-secondary">My
                 Profile</a></li>
-            <li class="nav-item"><a href="{% url 'logout' %}"
-                class="nav-link-footer p-0 text-body-secondary">Logout</a></li>
+            <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link-footer p-0 text-body-secondary">Logout</a>
+            </li>
           </ul>
           {% else %}
           <p class="footer-link-heading">Account:</p>
@@ -119,11 +128,10 @@
           </ul>
         </div>
       </div>
-</footer>
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-2 my-2 border-top"
-        id="footer-container-last">
-        <p>&copy; 2025 The Witches Society, All rights reserved.</p>
-      </div>
+    </footer>
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-2 my-2 border-top" id="footer-container-last">
+      <p>&copy; 2025 The Witches Society, All rights reserved.</p>
+    </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

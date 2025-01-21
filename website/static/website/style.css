@@ -4,6 +4,17 @@ body {
   flex-direction: column;
   background: #fafafa;
   color: #333333;
+  font-family: "rubik", sans-serif;
+}
+
+.irish-grover-regular {
+  font-family: "Irish Grover", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar-brand {
+  font-size: 25px;
 }
 
 main {
@@ -11,7 +22,7 @@ main {
 }
 
 #navigation {
-  background-color: rgb(153, 62, 80);
+  background-color: #993e50;
 }
 
 ul {
@@ -86,11 +97,16 @@ ul {
 }
 
 .welcome-text h2 {
-  font-size: medium;
+  font-size: 26px;
 }
+
+.welcome-text p{
+  font-size: 20px;
+}
+
 .welcome-text a {
   text-decoration: none;
-  color:rgb(110, 41, 55);
+  color:#6e2937;
 }
 .welcome-text a:hover {
   color: #fafafa;
