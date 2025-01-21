@@ -255,6 +255,11 @@ a.article-title:hover {
   color: #fafafa;
 }
 
+/* -------- LOGOUT PAGE -------- */
+.logout-container {
+  background-color:rgba(243, 186, 186, 0.9);
+}
+
 /* -------- FOOTER -------- */
 
 #footer-container {
@@ -277,6 +282,15 @@ a.article-title:hover {
 .footer-link-heading {
   font-size: 1.2rem;
 }
+
+.nav-link-footer {
+  color:#fafafa;
+}
+
+.nav-link-footer:hover {
+  color:#fafafa;
+}
+
 
 #social-icons li {
   font-size: 2rem;

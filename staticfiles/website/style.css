@@ -52,6 +52,7 @@ ul {
   border-radius: 10px;
   aspect-ratio: initial;
   overflow: hidden;
+  object-fit: cover;
 }
 
 .fade {
@@ -93,64 +94,6 @@ ul {
 }
 .welcome-text a:hover {
   color: #fafafa;
-}
-
-/* -------- BLOG PAGE -------- */
-.content-section {
-  background: #f3baba;
-  padding: 10px 20px;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
-  margin-bottom: 20px;
-}
-
-.article-title {
-  color: #333333;
-}
-
-a.article-title:hover {
-  color: #428bca;
-  text-decoration: none;
-}
-
-.article-content {
-  white-space: pre-line;
-}
-
-.article-img {
-  height: 65px;
-  width: 65px;
-  margin-right: 16px;
-}
-
-.article-metadata {
-  padding-bottom: 1px;
-  margin-bottom: 4px;
-  border-bottom: 1px solid #e3e3e3
-}
-
-.article-metadata a:hover {
-  color: #333;
-  text-decoration: none;
-}
-
-.article-svg {
-  width: 25px;
-  height: 25px;
-  vertical-align: middle;
-}
-
-.account-img {
-  height: 125px;
-  width: 125px;
-  margin-right: 20px;
-  margin-bottom: 16px;
-}
-
-
-
-.account-heading {
-  font-size: 2.5rem;
 }
 
 /* -------- ABOUT PAGE -------- */
@@ -215,13 +158,79 @@ a.article-title:hover {
   font-size: 14px;
 }
 
+/* -------- BLOG PAGE -------- */
+.content-section {
+  background: #f3baba;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  min-height: 95%;
+}
+.blog-photo {
+  object-fit: cover;
+  overflow: hidden;
+}
+.article-title {
+  color: #333333;
+  font-size: 20px;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+}
+
+.article-metadata a:hover {
+  text-decoration: none;
+}
+
+.post-author-text {
+  color:rgb(110, 41, 55);
+}
+.post-author-text a {
+  color:rgb(110, 41, 55);
+}
+.post-author-text a:hover {
+  color: #fafafa;
+}
+/* -------- POST DETAIL -------- */
+
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.blog-post-image {
+  object-fit: cover;
+  overflow: hidden;
+}
+
 /* -------- PROFILE PAGE -------- */
 .profile-content-section {
   width:30rem;
   background: #f3baba;
   border-radius: 3px;
-  margin-bottom: 20px;
 }
+#profile-pic {
+  height: 160px;
+  width: 160px;
+  overflow:hidden;
+  object-fit: cover;
+  margin: auto;
+}
+
 #profile-card {
   background-color: #f3baba;
   border:none;
@@ -246,15 +255,11 @@ a.article-title:hover {
   color: #fafafa;
 }
 
-
-
-#profile-pic {
-  height: 160px;
-  width: 160px;
-  overflow:hidden;
-  object-fit: cover;
-  margin: auto;
+/* -------- LOGOUT PAGE -------- */
+.logout-container {
+  background-color:rgba(243, 186, 186, 0.9);
 }
+
 /* -------- FOOTER -------- */
 
 #footer-container {
@@ -277,6 +282,15 @@ a.article-title:hover {
 .footer-link-heading {
   font-size: 1.2rem;
 }
+
+.nav-link-footer {
+  color:#fafafa;
+}
+
+.nav-link-footer:hover {
+  color:#fafafa;
+}
+
 
 #social-icons li {
   font-size: 2rem;

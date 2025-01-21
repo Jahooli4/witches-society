@@ -71,18 +71,18 @@
   </main>
   <!-- FOOTER -->
   <div class="container" id="footer-container">
-    <footer class="py-5 mx-auto" id="footer-container-secondary">
+    <footer class="py-3 mx-auto" id="footer-container-secondary">
       <div class="row">
         <div class="col-6 col-md-3 mb-3">
-          <p class="footer-link-heading">Site Links</p>
+          <p class="footer-link-heading">Site Links:</p>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="{% url 'website-home' %}"
+            <li class="nav-item"><a href="{% url 'website-home' %}"
                 class="nav-link-footer p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="{% url 'website-about' %}"
+            <li class="nav-item"><a href="{% url 'website-about' %}"
                 class="nav-link-footer p-0 text-body-secondary">About</a></li>
-            <li class="nav-item mb-2"><a href="{% url 'website-blog' %}"
+            <li class="nav-item"><a href="{% url 'website-blog' %}"
                 class="nav-link-footer p-0 text-body-secondary">Blog</a></li>
-            <li class="nav-item mb-2"><a href="#"
+            <li class="nav-item"><a href="#"
                 class="nav-link-footer p-0 text-body-secondary">Contact</a></li>
           </ul>
         </div>
@@ -91,17 +91,17 @@
           {% if user.is_authenticated %}
           <p class="footer-link-heading">My Account</p>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="{% url 'profile' %}" class="nav-link-footer p-0 text-body-secondary">My
+            <li class="nav-item"><a href="{% url 'profile' %}" class="nav-link-footer p-0 text-body-secondary">My
                 Profile</a></li>
-            <li class="nav-item mb-2"><a href="{% url 'logout' %}"
+            <li class="nav-item"><a href="{% url 'logout' %}"
                 class="nav-link-footer p-0 text-body-secondary">Logout</a></li>
           </ul>
           {% else %}
-          <p class="footer-link-heading">Account</p>
+          <p class="footer-link-heading">Account:</p>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="{% url 'register' %}"
+            <li class="nav-item"><a href="{% url 'register' %}"
                 class="nav-link-footer p-0 text-body-secondary">Register</a></li>
-            <li class="nav-item mb-2"><a href="{% url 'login' %}" class="nav-link-footer p-0 text-body-secondary">Log
+            <li class="nav-item"><a href="{% url 'login' %}" class="nav-link-footer p-0 text-body-secondary">Log
                 In</a></li>
           </ul>
           {% endif %}
@@ -120,7 +120,7 @@
         </div>
       </div>
 </footer>
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-2 my-2 border-top"
         id="footer-container-last">
         <p>&copy; 2025 The Witches Society, All rights reserved.</p>
       </div>
