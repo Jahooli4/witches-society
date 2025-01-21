@@ -2,33 +2,35 @@
 {% load static %}
 {% block content %}
 <h1 class="blog-title">Blog:</h1>
-{% for post in posts %}
-<article class="media content-section">
-  <div id="profile-image-container">
-    {% if "default" in post.author.profile.image.url %}
-    <!-- PROFILE IMAGE (default img is displayed if user does not upload their own) -->
-        <img class="rounded-circle account-img" src="https://res.cloudinary.com/dfm2di4ln/image/upload/v1737237533/default-profile_bhs5bd.jpg" alt="profile picture">
-    {% else %}
-        <img class="rounded-circle account-img" src="{{ post.author.profile.image.url }}" alt="profile picture">
-    {% endif %}
-  </div>
-  <div class="media-body">
-    <div class="image-container">
-      {% if "placeholder" in post.featured_image.url %}
-      <img class="card-img-top" src="https://res.cloudinary.com/dfm2di4ln/image/upload/v1737287397/placeholder_rrvyx8.jpg" alt="placeholder image">
-      {% else %}
-      <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
-      {% endif %}
-    </div>
-    <div class="article-metadata">
-      <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
-      <small class="text-muted">{{ post.date_posted|date:"N d, Y" }}</small>
-    </div>
-    <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-    <p class="article-content">{{ post.content }}</p>
-  </div>
-</article>
-{% endfor %}
+<div class="row">
+  
+  {% for post in posts %}
+  <div class="col-lg-4 col-md-6">
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="image-container card">
+          {% if "placeholder" in post.featured_image.url %}
+          <img class="card-img-top blog-photo" style="height:200px;"
+            src="https://res.cloudinary.com/dfm2di4ln/image/upload/v1737287397/placeholder_rrvyx8.jpg"
+            alt="placeholder image">
+          {% else %}
+          <img class="card-img-top blog-photo" style="height:200px;" src="{{ post.featured_image.url }}"
+            alt="{{ post.title }}">
+          {% endif %}
+        </div>
+        <div class="article-metadata">
+          <p class="mb-0">Author: <a class="mr-2 post-author-text" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a></p>
+          <small class="text-muted">{{ post.date_posted|date:"N d, Y" }}</small>
+        </div>
+        <h2><a class="article-title post-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+        <!-- <p class="article-content">{{ post.content }}</p> -->
+      </div>
+    </article>
+  
+</div>
+  {% endfor %}
+
+</div>
 {% if is_paginated %}
 
 {% if page_obj.has_previous %}

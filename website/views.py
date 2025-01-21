@@ -8,7 +8,6 @@ from django.views.generic import (
     UpdateView,
     DeleteView
 )
-from datetime import datetime, timedelta
 from .models import Post
 from django.contrib import messages
 from django.urls import reverse_lazy
@@ -37,7 +36,7 @@ class PostListView(ListView):
     template_name = 'website/blog.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
-    paginate_by = 3
+    paginate_by = 6
 
 
 class UserPostListView(ListView):
@@ -61,7 +60,9 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        messages.success(self.request, 'Your spell has been successfully added to the Grimoire.')
+        messages.success(self.request,
+                         'Your spell has been successfully'
+                         ' added to the Grimoire.')
         return super().form_valid(form)
 
 
