@@ -31,7 +31,7 @@ ul {
 }
 
 /* -------- PAGE TITLES -------- */
-.blog-title, .about-title, .home-title {
+.blog-title, .about-title, .home-title, .user-posts-title {
   font-size: 1.6rem;
 }
 
@@ -216,6 +216,9 @@ a.article-title:hover {
   object-fit: cover;
   overflow: hidden;
 }
+
+/* -------- USER POSTS PAGE -------- */
+
 
 /* -------- PROFILE PAGE -------- */
 .profile-content-section {

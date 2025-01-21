@@ -11,7 +11,6 @@ def register(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            username = form.cleaned_data.get('username')
             messages.success(request, 'Account successfully created, welcome'
                              ' to the Witches Scoiety! You may now login.')
             return redirect('login')
@@ -30,7 +29,7 @@ def profile(request):
             u_form.save()
             p_form.save()
             messages.success(
-                request, f'Your account info has been successfully updated!')
+                request, 'Your account info has been successfully updated!')
             return redirect('profile')
     else:
         u_form = UserUpdateForm(instance=request.user)
