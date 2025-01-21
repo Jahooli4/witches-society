@@ -187,8 +187,6 @@ a.article-title:hover {
 
 .article-metadata {
   padding-bottom: 1px;
-  margin-bottom: 4px;
-  border-bottom: 1px solid #e3e3e3
 }
 
 .article-metadata a:hover {
@@ -198,16 +196,41 @@ a.article-title:hover {
 .post-author-text {
   color:rgb(110, 41, 55);
 }
+.post-author-text a {
+  color:rgb(110, 41, 55);
+}
+.post-author-text a:hover {
+  color: #fafafa;
+}
+/* -------- POST DETAIL -------- */
 
 
+.account-img {
+  height: 125px;
+  width: 125px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.blog-post-image {
+  object-fit: cover;
+  overflow: hidden;
+}
 
 /* -------- PROFILE PAGE -------- */
 .profile-content-section {
   width:30rem;
   background: #f3baba;
   border-radius: 3px;
-  margin-bottom: 20px;
 }
+#profile-pic {
+  height: 160px;
+  width: 160px;
+  overflow:hidden;
+  object-fit: cover;
+  margin: auto;
+}
+
 #profile-card {
   background-color: #f3baba;
   border:none;
@@ -232,15 +255,6 @@ a.article-title:hover {
   color: #fafafa;
 }
 
-
-
-#profile-pic {
-  height: 160px;
-  width: 160px;
-  overflow:hidden;
-  object-fit: cover;
-  margin: auto;
-}
 /* -------- FOOTER -------- */
 
 #footer-container {
