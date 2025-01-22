@@ -1,7 +1,7 @@
 {% extends "website/base.html" %}
 {% load static %}
 {% block content %}
-<article class="media content-section mt-3">
+<article class="media content-section mt-3 rounded">
 <div class="row p-5">
   
     <div class="col-lg-3 text-center">
@@ -25,7 +25,7 @@
     <div class="col-lg-9">
 
       <div class="media-body">
-        <div class="image-container">
+        <div class="image-container rounded">
           {% if "placeholder" in post.featured_image.url %}
           <img class="card-img-top blog-post-image" style="height: 60vh; width: 100%;"
             src="https://res.cloudinary.com/dfm2di4ln/image/upload/v1737287397/placeholder_rrvyx8.jpg"

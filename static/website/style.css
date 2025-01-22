@@ -178,10 +178,9 @@ ul {
 .content-section {
   background: #f3baba;
   padding: 10px 20px;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
   margin-bottom: 20px;
   min-height: 95%;
+  box-shadow: 5px 5px 10px rgb(146, 61, 67);
 }
 .blog-photo {
   object-fit: cover;
@@ -259,7 +258,12 @@ a.article-title:hover {
   display: none;
 }
 
-#update-btn:hover {
+.pagination-buttons {
+  color:#333333;
+  background-color: #fafafa;
+  border: solid 1px #6e2937;
+}
+.update-btn:hover, .pagination {
   background-color: rgb(146, 61, 67);
   color: #fafafa;
 }

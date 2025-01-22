@@ -6,10 +6,10 @@
 <div class="row">
 
   {% for post in posts %}
-  <div class="col-lg-4 col-md-6">
-    <article class="media content-section">
+  <div class="col-lg-4 col-md-6 mt-3">
+    <article class="media content-section rounded">
       <div class="media-body">
-        <div class="image-container mt-2">
+        <div class="image-container mt-2 rounded">
           {% if "placeholder" in post.featured_image.url %}
           <img class="card-img-top blog-photo" style="height:200px;"
             src="https://res.cloudinary.com/dfm2di4ln/image/upload/v1737287397/placeholder_rrvyx8.jpg"
@@ -20,7 +20,7 @@
           {% endif %}
         </div>
         <div class="article-metadata">
-          <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+          <a class="mr-2 post-author-text" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
           <small class="text-muted">{{ post.date_posted|date:"N d, Y" }}</small>
         </div>
         <h2><a class="article-title post-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
@@ -32,21 +32,21 @@
 {% if is_paginated %}
 
 {% if page_obj.has_previous %}
-<a class="btn btn-outline-info mb-4" href="?page=1">First</a>
-<a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+<a class="btn pagination-buttons mb-4" href="?page=1">First</a>
+<a class="btn pagination mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
 {% endif %}
 
 {% for num in page_obj.paginator.page_range %}
 {% if page_obj.number == num %}
-<a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+<a class="btn pagination-buttons mb-4" href="?page={{ num }}">{{ num }}</a>
 {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-<a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+<a class="btn pagination-buttons mb-4" href="?page={{ num }}">{{ num }}</a>
 {% endif %}
 {% endfor %}
 
 {% if page_obj.has_next %}
-<a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
-<a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+<a class="btn pagination-buttons mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+<a class="btn pagination-buttons mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
 {% endif %}
 
 {% endif %}
