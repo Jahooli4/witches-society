@@ -9,12 +9,13 @@
   <div class="col-lg-4 col-md-6">
     <article class="media content-section">
       <div class="media-body">
-        <div class="image-container">
+        <div class="image-container mt-2">
           {% if "placeholder" in post.featured_image.url %}
-          <img class="card-img-top blog-photo" style="height:200px;" src="{% static 'images/default.jpg' %}"
+          <img class="card-img-top blog-photo" style="height:200px;"
+            src="https://res.cloudinary.com/dfm2di4ln/image/upload/v1737287397/placeholder_rrvyx8.jpg"
             alt="placeholder image">
           {% else %}
-          <img class="card-img-top blog-photo" style="height:200px;" src=" {{ post.featured_image.url }}"
+          <img class="card-img-top blog-photo" style="height:200px;" src="{{ post.featured_image.url }}"
             alt="{{ post.title }}">
           {% endif %}
         </div>
