@@ -63,11 +63,54 @@ User stories can be found [here](https://github.com/users/Jahooli4/projects/4/vi
 ### Site pages:
 #### Home page
 The landing page for the Witches Society is simple and clean with intuitive navigation. A hero slideshow offers a more engaging option than a single image.
+
 ![Home page](documentation/homepage.png)
 
 ### Footer section
-The footer section contains all relevant site links and social media
+The footer section contains all relevant site and social media links. Account links are displayed for logged in users.
+
 ![Home page2](documentation/footer.png)
 
+### About page
+The about page contains information about the site owners, the site's purpose, and how to use it. The information text is neatly concealed behind flip cards with a tarot card front to keep the visual design on brand.
 
+![About page](documentation/aboutpage.png)
+![About page](documentation/aboutpage2.png)
 
+### Spell blog page
+The blog page is organised with each blog post displayed featuring the post image, title, author and date. The posts are displayed in orde rof date posted, with the most recent at the top.
+
+![Blog page](documentation/blogpage.png)
+
+### Pagination
+Both blog and user post pages are paginated by 6, when the post count eceeds this numbered buttons are displayed at the bottom of the page to make navigation user friendly.
+
+![Pagination](documentation/pagination.png)
+
+### Post detail
+The post detail displays the full blog post content and photo, including a small thumbnail of the author's profile picture.
+
+![Post detail](documentation/postdetail.png)
+
+### Post edit
+The edit/delete buttons are only visible to the logged in post author.
+
+![Post edit](documentation/postedit.png)
+
+### Post Delete
+Double checks the user is sure they want to delete their post to avoid accidental one click deletes.
+
+![Post edit](documentation/postdelete.png)
+
+### User posts page
+If a user clicks on an author's username on any page then they will be taken to a page displaying a list of posts by that author.
+
+![User posts](documentation/userpost.png)
+
+### Spell submition page
+The spell submission page features a form that allows users to ubmit their own spell posts to the blog. If users neglect to upload a photo then a default header image is automatically added instead.
+
+![Spell submition form](documentation/spellsubmit.png)
+
+### Profile page
+T
