@@ -59,3 +59,15 @@ User stories can be found [here](https://github.com/users/Jahooli4/projects/4/vi
 - Only accessible to logged in users
 - Form allows users to submit spell blog posts
 
+## Existing Features
+### Site pages:
+#### Home page
+The landing page for the Witches Society is simple and clean with intuitive navigation. A hero slideshow offers a more engaging option than a single image.
+![Home page](documentation/homepage.png)
+
+### Footer section
+The footer section contains all relevant site links and social media
+![Home page2](documentation/footer.png)
+
+
+
