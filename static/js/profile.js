@@ -1,7 +1,7 @@
 // PROFILE UPDATE
 
 // Gets the update button and adds event listener
-let editButton = document.getElementById('update-btn');
+let editButton = document.getElementById('profile-update-btn');
 editButton.addEventListener("click", showForm);
 
 // Function to display the update form (hidden by default)

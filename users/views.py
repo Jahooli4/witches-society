@@ -12,7 +12,7 @@ def register(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Account successfully created, welcome'
-                             ' to the Witches Scoiety! You may now login.')
+                             ' to the Witches Society! You may now login:')
             return redirect('login')
     else:
         form = UserRegisterForm()

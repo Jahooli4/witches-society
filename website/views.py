@@ -43,7 +43,8 @@ class UserPostListView(ListView):
     model = Post
     template_name = 'website/user_posts.html'
     context_object_name = 'posts'
-    paginate_by = 5
+    ordering = ['-date_posted']
+    paginate_by = 6
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))

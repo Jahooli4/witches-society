@@ -263,7 +263,7 @@ a.article-title:hover {
   background-color: #fafafa;
   border: solid 1px #6e2937;
 }
-.update-btn:hover, .pagination {
+.update-btn:hover, .pagination-buttons:hover {
   background-color: rgb(146, 61, 67);
   color: #fafafa;
 }
