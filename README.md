@@ -112,5 +112,34 @@ The spell submission page features a form that allows users to ubmit their own s
 
 ![Spell submition form](documentation/spellsubmit.png)
 
+### Register page
+Provides a form for users to fill out should they wish to create an account and access logged in user features.
+
+![Register page](documentation/register.png)
+
 ### Profile page
-T
+The profile page displays the user's information in a clean and organised way. An 'edit profile' button has been provided should users wish to update any of their details. When clicked it reveals the update profile form.
+
+![Profile page](documentation/profile.png)
+
+### Edit profile form
+Contains all the relevent fields a user may wish to alter, including their profile picture.
+
+![Edit profile form](documentation/profileedit.png)
+
+### Logout
+Alerts users that they have successfully logged out.
+
+![Logout page](documentation/logout.png)
+
+## Future features
+
+### Front end admin panel
+- Would allow admin users to access user profiles and investigate any issues they may have.
+- Admin users would be able to delete any user's posts, not just the ones they have created.
+
+### Password reset
+- A feature to allow users to reset their passwords, users would be sent an email with a link.
+- This is a fairly essential feature to prevent users being locked out of their accounts without having to contact admin to resolve the issue.
+
+### 
