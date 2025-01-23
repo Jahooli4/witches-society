@@ -5,7 +5,7 @@
     <div class="col-md-8 mt-4 ml-auto mr-auto content-section">
         <form method="POST">
             {% csrf_token %}
-            <fieldset clas="form-group">
+            <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Join the Coven:</legend>
                 {{ form|crispy }}
             </fieldset>
@@ -14,9 +14,9 @@
             </div>
         </form>
         <div class="border-top pt-3">
-            <small class="text-muted">
+            <p class="text-muted small">
                 Already a member? <a class="ml-2" href="{% url 'login' %}">Sign in here</a>
-            </small>
+            </p>
         </div>
     </div>
 </div>

@@ -83,7 +83,8 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return False
 
 
-class PostDeleteView(SuccessMessageMixin, LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+class PostDeleteView(SuccessMessageMixin,
+                     LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     success_url = '/blog/'
     success_message = (

@@ -172,3 +172,4 @@ Alerts users that they have successfully logged out.
 | Profile page - Fill out edit profile form and submit. | User info is updated correctly. | PASS| 
 | Logout page - Click logout link. | User is logged out correctly and message displays confirming this. | PASS| 
 | Responsiveness - UX | Resize site for all device sizes. | Check that images/text/other elements resize as expected, text should be readable and elements should all be visible and not overlap randomly. Repeat for every page. | PASS|
+

@@ -25,7 +25,7 @@
     <div class="edit-profile-container">
         <form class="p-3" method="POST" id="update-form" enctype="multipart/form-data">
             {% csrf_token %}
-            <fieldset clas="form-group">
+            <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Profile info:</legend>
                 {{ u_form|crispy }}
                 {{ p_form|crispy }}
