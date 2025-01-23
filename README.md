@@ -142,4 +142,33 @@ Alerts users that they have successfully logged out.
 - A feature to allow users to reset their passwords, users would be sent an email with a link.
 - This is a fairly essential feature to prevent users being locked out of their accounts without having to contact admin to resolve the issue.
 
-### 
+### Blog page
+- Once the blog is established and has a lot more posts it would be handy to be able to filter the posts by theme.
+
+## Testing
+
+### User testing
+| Feature being tested:| Steps                                | Expected outcome  | Pass/Fail |
+|:---------------------|:-------------------------------------|:------------------|-----|
+| Navigation - Logo | Click the logo on every page. | The logo should link the user back to the homepage, should be active on every page. | PASS |
+| Home page - UX | Read through the text. | The site purpose should be obvious to any user from reading the front page. | PASS |
+| About page - | Hover over each flip card. |Each flip tarot card should turn to reveal the text behind. | PASS |
+| About page - |Hover over each flip card. | The text on the tarot cards should not spill over the parameter of the container on any device size. | PASS |
+| Blog page/User post - | Load the blog/user posts page. | Posts should display in order of date. | PASS |
+| User post page - | Click on the username of an author on any post. | Link should take you to a page with a list of posts by that user. | PASS |
+| Pagination - | Click through pagination buttons. | Buttons should take you to the relevant page. | PASS |
+| Footer - Social media icons | Click each one, test on each page. | Each link should change colour when hovered over and open in a new tab when clicked. | PASS |
+| Submit a spell page - Fill out the spell submission page | Post is successfully created and success message displayed | PASS|
+| Submit a spell page - Submit form without header image. | Post is successfully created and default header image applied. | PASS|
+| Post detail - Load an idividual post. | Edit/delete buttons only visible to the post author. | PASS|
+| Edit post button - Alter post fields. | Post is successfully updated and success message displayed | PASS|
+| Delete post button - Delete post. | Post is successfully deleted and confirmation message displayed | PASS|
+| Register page - | Fill out the registration form. | New profile should be successfully created. | PASS |
+| Deafault profile image - | Create new account without a profile picture. | Account should be created with default profile image. | PASS |
+| Login page - Login with invalid user details. | Access denied. | PASS |
+| Login page - Login with valid user details. | Access granted and redirected to the home page. | PASS |
+| Profile page - Load profile page as a logged in user. | User info is displayed correctly. | PASS| 
+| Profile page - Click 'edit profile button. | Edit profile form is displayed. | PASS| 
+| Profile page - Fill out edit profile form and submit. | User info is updated correctly. | PASS| 
+| Logout page - Click logout link. | User is logged out correctly and message displays confirming this. | PASS| 
+| Responsiveness - UX | Resize site for all device sizes. | Check that images/text/other elements resize as expected, text should be readable and elements should all be visible and not overlap randomly. Repeat for every page. | PASS|
