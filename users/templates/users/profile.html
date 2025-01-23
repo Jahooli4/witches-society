@@ -4,7 +4,6 @@
 {% block content %}
 <div class="profile-content-section pt-5 pb-5 mt-5 mb-3 ml-auto mr-auto">
     <div class="card m-auto" id="profile-card" style="width: 25rem; height: auto;">
-        <!-- <div id="profile-image-container"> -->
         {% if "default" in user.profile.image.url %}
         <!-- PROFILE IMAGE (default img is displayed if user does not upload their own) -->
         <img class="rounded-circle card-image-top" id="profile-pic"
@@ -14,15 +13,16 @@
         <img class="rounded-circle card-image-top " id="profile-pic" src="{{ user.profile.image.url }}"
             alt="profile picture">
         {% endif %}
-        <!-- </div> -->
+        <!-- USERNAME AND EMAIL -->
         <div class="card-body">
             <h2 class="card-text text-center">username: {{ user.username }}</h2>
             <p class="text-secondary card-text text-center">Email: {{ user.email }}</p>
         </div>
-
+        <!-- EDIT PROFILE (Reaveals edit profile form) -->
         <button class="btn update-btn" id="profile-update-btn">Edit Profile</button>
     </div>
     <div class="edit-profile-container">
+        <!-- EDIT PROFILE FORM -->
         <form class="p-3" method="POST" id="update-form" enctype="multipart/form-data">
             {% csrf_token %}
             <fieldset class="form-group">
@@ -30,6 +30,7 @@
                 {{ u_form|crispy }}
                 {{ p_form|crispy }}
             </fieldset>
+            <!-- UPDATE/CANCEL BUTTONS (cancel button hides form again) -->
             <div class="form-group text-center">
                 <button class="btn btn-dark" id="profile-update-btn" type="submit">Update</button>
                 <p class="btn btn-secondary my-3" id="cancel-btn">Cancel</p>

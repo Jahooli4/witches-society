@@ -2,9 +2,11 @@
 {% block content %}
 <div class="row">
     <div class="col-11 col-md-8 logout-container text-center mt-4 ml-auto mr-auto p-4">
-        <h2 class="mb-3">Goodbye for now!</h2> 
+        <!-- MESSAGE TO CONFIRM LOGOUT -->
+        <h2 class="mb-3">Goodbye for now!</h2>
         <h3>You have been logged out.</h3>
         <div class="pt-3">
+            <!-- LOGIN LINK -->
             <small class="text-muted">
                 <a class="btn btn-dark" href="{% url 'login' %}">Log in again</a>
             </small>

@@ -4,17 +4,20 @@
 <div class="row">
     <div class="col-md-8 mt-4 ml-auto mr-auto">
         <div class="content-section">
+            <!-- Login form -->
             <form method="POST">
                 {% csrf_token %}
                 <fieldset class="form-group">
                     <legend class="border-bottom mb-4">Login</legend>
                     {{ form|crispy }}
                 </fieldset>
+                <!-- Login button -->
                 <div class="form-group">
                     <button class="btn btn-dark" type="submit">Login</button>
                 </div>
             </form>
             <div class="border-top pt-3">
+                <!-- SIGN UP LINK -->
                 <small class="text-muted">
                     Don't have an account?<a class="ml-2" href="{% url 'register' %}">Sign up here</a>
                 </small>

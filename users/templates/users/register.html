@@ -5,15 +5,18 @@
     <div class="col-md-8 mt-4 ml-auto mr-auto content-section">
         <form method="POST">
             {% csrf_token %}
+            <!-- SIGN UP FORM -->
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Join the Coven:</legend>
                 {{ form|crispy }}
             </fieldset>
+            <!-- SUBMIT BUTTON -->
             <div class="form-group">
                 <button class="btn submit-btn" type="submit">Join the Coven</button>
             </div>
         </form>
         <div class="border-top pt-3">
+            <!-- SIGN IN LINK -->
             <p class="text-muted small">
                 Already a member? <a class="ml-2" href="{% url 'login' %}">Sign in here</a>
             </p>
