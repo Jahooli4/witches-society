@@ -1,10 +1,9 @@
 {% extends "website/base.html" %}
 {% load static %}
 {% block content %}
-<!-- Slideshow container -->
-<div class="slideshow-container">
 
-  <!-- Full-width images with number and caption text -->
+<div class="slideshow-container">
+  <!-- HERO IMAGE SLIDESHOW -->
   <div class="mySlides fade">
     <img aria-label="ouija board flatlay" load="lazy" alt="ouija board flatlay"
       src="https://res.cloudinary.com/dfm2di4ln/image/upload/v1737654219/Screenshot_2025-01-23_at_12.09.08_1_1_-min_otur8y.jpg"
@@ -27,16 +26,16 @@
     <h2>
       Welcome to The Witches Society
     </h2>
+    <!-- Not displayed on Xs devices -->
     <p class="d-none d-sm-block">
       The collaborative Grimoire of spells and all things witchy
     </p>
+    <!-- Not displayed on Small and XS devices -->
     <p class="d-none d-sm-none d-md-block">
       Click <a href="{% url 'website-blog' %}" aria-label="link to blog page.">here to browse our spell blog</a>
     </p>
   </div>
 </div>
-
-
 {% endblock content %}
 {% block scripts %}
 <!-- JS FOR SLIDESHOW -->

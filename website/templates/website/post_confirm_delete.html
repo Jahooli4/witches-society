@@ -4,11 +4,13 @@
     <div class="col-md-8 mt-4 ml-auto mr-auto content-section">
         <form method="POST">
             {% csrf_token %}
+            <!-- DOUBLE CHECKS USERS ARE SURE THEY WANT TO DELETE -->
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Delete post</legend>
                 <h2>Are you sure you want to delete your spell: "{{ object.title }}"?</h2>
             </fieldset>
             <div class="form-group">
+                <!-- CONFIRM BUTTON -->
                 <button class="btn btn-danger" type="submit">Confirm Delete</button>
                 <a class="btn btn-outline-secondary" href="{% url 'post-detail' object.id %}">Cancel</a>
             </div>

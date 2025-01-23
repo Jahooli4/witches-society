@@ -1,14 +1,15 @@
 {% extends "website/base.html" %}
 {% load static %}
 {% block content %}
+<!-- PAGE TITLE -->
 <h1 class="mb-3 mt-3 user-posts-title">Posts by {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h1>
-
 <div class="row">
-
+  <!-- FOR EVERY POST LISTED, DO THIS -->
   {% for post in posts %}
   <div class="col-lg-4 col-md-6 mt-3">
     <article class="media content-section rounded">
       <div class="media-body">
+        <!-- POST IMAGE - Display default if user has not uploaded their own -->
         <div class="image-container mt-2 rounded">
           {% if "placeholder" in post.featured_image.url %}
           <img class="card-img-top blog-photo" style="height:200px;"
@@ -20,6 +21,7 @@
           {% endif %}
         </div>
         <div class="article-metadata">
+          <!-- POST AUTHOR AND DATE -->
           <a class="mr-2 post-author-text" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
           <small class="text-muted">{{ post.date_posted|date:"N d, Y" }}</small>
         </div>
@@ -29,6 +31,7 @@
   </div>
   {% endfor %}
 </div>
+<!-- PAGINATION -->
 {% if is_paginated %}
 
 {% if page_obj.has_previous %}

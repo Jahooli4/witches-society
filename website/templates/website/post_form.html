@@ -5,10 +5,12 @@
     <div class="col-md-8 mt-4 ml-auto mr-auto content-section">
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
+            <!-- FORM FOR USERS TO SUBMIT A SPELL BLOG POST -->
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Submit a spell:</legend>
                 {{ form|crispy }}
             </fieldset>
+            <!-- SUBMIT BUTTON -->
             <div class="form-group text-center">
                 <button class="btn update-btn p-2" type="submit">Submit</button>
             </div>
