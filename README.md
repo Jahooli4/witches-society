@@ -175,6 +175,27 @@ Alerts users that they have successfully logged out.
 
 ## Lighthouse testing
 
+### Home page (minor performance issues):
+![Lighthouse Home page](documentation/lighthouse-testing/lighthouse-home.png)
+
+### About page:
+![Lighthouse About page](documentation/lighthouse-testing/lighthouse-about.png)
+
+### Blog page:
+![Lighthouse Blog page](documentation/lighthouse-testing/lighthouse-blog.png)
+
+### Post form page:
+![Lighthouse Post form page](documentation/lighthouse-testing/lighthouse-postform.png)
+
+### Register page:
+![Lighthouse Register page](documentation/lighthouse-testing/lighthouse-register.png)
+
+### Login page:
+![Lighthouse Login page](documentation/lighthouse-testing/lighthouse-login.png)
+
+### Profile page:
+![Lighthouse Profile page](documentation/lighthouse-testing/lighthouse-profile.png)
+
 
 ## HTML validator
 
@@ -230,3 +251,4 @@ JS validator used: [JS validator](https://jshint.com/)
 
 ## Python testing
  Python validator used [Python validator](https://pep8ci.herokuapp.com/)
+

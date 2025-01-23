@@ -13,8 +13,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-if os.path.isfile('env.py'):
-    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,8 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-j5zdq-&$^6k2xbgw7#-#8l8unz427xy=5&joi%y8h7(34jj8*w'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# SECURITY WARNING: don't run with debug turned on!
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-jahooli4-witchessociety-2zuk11im7oe.ws.codeinstitute-ide.net',
@@ -86,22 +84,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'witches_society.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
-# Password validation
-# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
