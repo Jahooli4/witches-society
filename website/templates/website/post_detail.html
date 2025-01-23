@@ -1,11 +1,10 @@
 {% extends "website/base.html" %}
 {% load static %}
 {% block content %}
+<div class="back-text mt-3"><a href="{% url 'website-blog' %}">Back to blog page</a></div>
 <article class="media content-section mt-3 rounded">
   <div class="row p-5">
-
     <div class="col-lg-3 text-center">
-
       <div>
         {% if "default" in post.author.profile.image.url %}
         <!-- PROFILE IMAGE (default img is displayed if user does not upload their own) -->

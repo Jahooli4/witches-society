@@ -173,3 +173,60 @@ Alerts users that they have successfully logged out.
 | Logout page - Click logout link. | User is logged out correctly and message displays confirming this. | PASS| 
 | Responsiveness - UX | Resize site for all device sizes. | Check that images/text/other elements resize as expected, text should be readable and elements should all be visible and not overlap randomly. Repeat for every page. | PASS|
 
+## Lighthouse testing
+
+
+## HTML validator
+
+HTML validator used: [HTML validator](https://validator.w3.org/nu/)
+
+### Home page:
+![HTML validator home](documentation/html-validator/html-val-1.png)
+
+### About page:
+![HTML validator home](documentation/html-validator/html-val-about.png)
+
+### Blog page:
+![HTML validator home](documentation/html-validator/html-val-blog.png)
+
+### Profile page:
+![HTML validator home](documentation/html-validator/html-val-profile.png)
+
+### Register page:
+![HTML validator home](documentation/html-validator/html-val-register.png)
+
+### Login page:
+![HTML validator home](documentation/html-validator/html-val-login.png)
+
+### Logout page:
+![HTML validator home](documentation/html-validator/html-val-logout.png)
+
+### Post detail page:
+![HTML validator home](documentation/html-validator/html-val-postdetail.png)
+
+### Post form page:
+![HTML validator home](documentation/html-validator/html-val-postform.png)
+
+### User posts page:
+![HTML validator home](documentation/html-validator/html-val-postuser.png)
+
+## CSS Testing
+
+CSS validator used: [CSS validator](https://jigsaw.w3.org/css-validator/)
+
+![CSS validator](documentation/css-validator.png)
+
+
+## JS Testing:
+
+JS validator used: [JS validator](https://jshint.com/)
+
+### Home page:
+![Home page](documentation/js-validator/home-js.png)
+
+### Profile page:
+![Profile page](documentation/js-validator/profile-js.png)
+
+
+## Python testing
+ Python validator used [Python validator](https://pep8ci.herokuapp.com/)

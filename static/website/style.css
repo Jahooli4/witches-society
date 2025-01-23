@@ -218,7 +218,9 @@ a.article-title:hover {
   color: #fafafa;
 }
 /* -------- POST DETAIL -------- */
-
+.back-text a {
+  color:rgb(110, 41, 55)
+}
 
 .account-img {
   height: 125px;
