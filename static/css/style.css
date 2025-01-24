@@ -33,17 +33,20 @@ ul {
 }
 
 .site-header .navbar-nav .nav-link {
-  color: #cbd5db;
+  color: #fafafa;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
+  color: #f3baba;
 }
 
 .nav-link.active {
   text-decoration: underline;
 }
 
+.white-text {
+  color: #fafafa;
+}
 /* -------- PAGE TITLES -------- */
 .blog-title,
 .about-title,
@@ -197,12 +200,15 @@ ul {
 }
 
 /* -------- BLOG PAGE -------- */
-.content-section {
-  background: #f6c2c2;
+.content-section, .blog-content-section {
+  background:rgb(255, 211, 211);
   padding: 10px 20px;
   border: 1px solid #dddddd;
   border-radius: 3px;
   margin-bottom: 20px;
+}
+
+.blog-content-section {
   min-height: 95%;
 }
 
@@ -217,8 +223,18 @@ ul {
 }
 
 a.article-title:hover {
-  color: #428bca;
+  color: #993e50;
   text-decoration: none;
+}
+
+.pagination-buttons {
+  background-color: #6e2937;
+  color: #fafafa;
+}
+
+.pagination-buttons:hover {
+  background-color:rgb(161, 97, 102);
+  color: #fafafa;
 }
 
 /* Blog content */
@@ -234,16 +250,15 @@ a.article-title:hover {
   text-decoration: none;
 }
 
-.post-author-text {
-  color: rgb(110, 41, 55);
+/* -------- REGISTER PAGE -------- */
+
+#hint_id_username, #hint_id_password1, #hint_id_password2 {
+  color: black !important;
 }
 
-.post-author-text a {
-  color: rgb(110, 41, 55);
-}
-
-.post-author-text a:hover {
-  color: #fafafa;
+.member-text a {
+color:rgb(160, 31, 85);
+text-decoration: underline;
 }
 
 /* -------- POST DETAIL -------- */
@@ -258,6 +273,12 @@ a.article-title:hover {
 .blog-post-image {
   object-fit: cover;
   overflow: hidden;
+  width: 60vh;
+  height: 100%;
+}
+
+.author-text {
+  color: blue;
 }
 
 .back-text {
@@ -265,7 +286,7 @@ a.article-title:hover {
 }
 
 .back-text a {
-  color: #fafafa;
+  color: white;
 }
 
 .back-text a:hover {
@@ -274,6 +295,10 @@ a.article-title:hover {
 
 .back-text:hover {
   background-color: #f3baba;
+}
+
+.blog-content-text {
+  max-width: 100%;
 }
 
 /* -------- PROFILE PAGE -------- */
@@ -307,12 +332,12 @@ a.article-title:hover {
 }
 
 /* Button to submit changes */
-#submit-btn:hover {
+.submit-btn:hover {
   background-color: rgb(161, 97, 102);
   color: #fafafa;
 }
 
-#submit-btn {
+.submit-btn {
   background-color: rgb(146, 61, 67);
   color: #fafafa;
 }

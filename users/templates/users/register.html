@@ -3,7 +3,7 @@
 {% block content %}
 <div class="row">
     <div class="col-md-8 mt-4 ml-auto mr-auto content-section">
-        <form method="POST">
+        <form class="register-form" method="POST">
             {% csrf_token %}
             <!-- SIGN UP FORM -->
             <fieldset class="form-group">
@@ -17,7 +17,7 @@
         </form>
         <div class="border-top pt-3">
             <!-- SIGN IN LINK -->
-            <p class="text-muted small">
+            <p class="member-text" class="small">
                 Already a member? <a class="ml-2" href="{% url 'login' %}">Sign in here</a>
             </p>
         </div>

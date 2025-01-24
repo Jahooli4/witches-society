@@ -2,9 +2,9 @@
 {% load static %}
 {% block content %}
 <!-- BACK TO BLOG PAGE BUTTON -->
-<button class="btn btn-sm back-text mt-3"><a href="{% url 'website-blog' %}">Back to blog</a></button>
+<button class="btn back-text mt-3"><a href="{% url 'website-blog' %}">Back to blog</a></button>
 <article class="media content-section mt-3 rounded">
-  <div class="row p-5">
+  <div class="row p-1 p-md-5">
     <div class="col-lg-3 text-center">
       <div>
         {% if "default" in post.author.profile.image.url %}
@@ -17,9 +17,9 @@
         {% endif %}
         <div class="article-metadata mt-1 mb-4">
           <!-- POST AUTHOR AND DATE -->
-          <p class="mb-0 post-author-text">by: <a class="mr-2"
+          <p class="mb-0">by: <a class="mr-2 author-text"
               href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a></p>
-          <small class="text-muted">{{ object.date_posted|date:"N d, Y" }}</small>
+          <small>{{ object.date_posted|date:"N d, Y" }}</small>
         </div>
       </div>
     </div>
@@ -39,8 +39,8 @@
         </div>
         <!-- BLOG TITLE + CONTENT -->
         <div>
-          <h2 class="article-title mt-4 font-weight-bold">{{ object.title }}:</h2>
-          <p class="article-content">{{ object.content }}</p>
+          <h2 class="article-title mt-4 font-weight-bold text-truncate">{{ object.title }}:</h2>
+          <p class="article-content blog-content-text text-truncate">{{ object.content }}</p>
         </div>
         <br>
         <!-- IF USER IS LOGGED IN, DISPLAY -->

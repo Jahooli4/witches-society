@@ -258,6 +258,7 @@ a.article-title:hover {
 .blog-post-image {
   object-fit: cover;
   overflow: hidden;
+  
 }
 
 .back-text {
@@ -307,12 +308,12 @@ a.article-title:hover {
 }
 
 /* Button to submit changes */
-#submit-btn:hover {
+.submit-btn:hover {
   background-color: rgb(161, 97, 102);
   color: #fafafa;
 }
 
-#submit-btn {
+.submit-btn {
   background-color: rgb(146, 61, 67);
   color: #fafafa;
 }
