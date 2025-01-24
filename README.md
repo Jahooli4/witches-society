@@ -158,19 +158,19 @@ Alerts users that they have successfully logged out.
 | User post page - | Click on the username of an author on any post. | Link should take you to a page with a list of posts by that user. | PASS |
 | Pagination - | Click through pagination buttons. | Buttons should take you to the relevant page. | PASS |
 | Footer - Social media icons | Click each one, test on each page. | Each link should change colour when hovered over and open in a new tab when clicked. | PASS |
-| Submit a spell page - Fill out the spell submission page | Post is successfully created and success message displayed | PASS|
-| Submit a spell page - Submit form without header image. | Post is successfully created and default header image applied. | PASS|
-| Post detail - Load an idividual post. | Edit/delete buttons only visible to the post author. | PASS|
-| Edit post button - Alter post fields. | Post is successfully updated and success message displayed | PASS|
-| Delete post button - Delete post. | Post is successfully deleted and confirmation message displayed | PASS|
+| Submit a spell page - | Fill out the spell submission page | Post is successfully created and success message displayed | PASS|
+| Submit a spell page - | Submit form without header image. | Post is successfully created and default header image applied. | PASS|
+| Post detail - | Load an idividual post. | Edit/delete buttons only visible to the post author. | PASS|
+| Edit post button - | Alter post fields. | Post is successfully updated and success message displayed | PASS|
+| Delete post button - | Delete post. | Post is successfully deleted and confirmation message displayed | PASS|
 | Register page - | Fill out the registration form. | New profile should be successfully created. | PASS |
 | Deafault profile image - | Create new account without a profile picture. | Account should be created with default profile image. | PASS |
-| Login page - Login with invalid user details. | Access denied. | PASS |
-| Login page - Login with valid user details. | Access granted and redirected to the home page. | PASS |
-| Profile page - Load profile page as a logged in user. | User info is displayed correctly. | PASS| 
-| Profile page - Click 'edit profile button. | Edit profile form is displayed. | PASS| 
-| Profile page - Fill out edit profile form and submit. | User info is updated correctly. | PASS| 
-| Logout page - Click logout link. | User is logged out correctly and message displays confirming this. | PASS| 
+| Login page - | Login with invalid user details. | Access denied. | PASS |
+| Login page - | Login with valid user details. | Access granted and redirected to the home page. | PASS |
+| Profile page - | Load profile page as a logged in user. | User info is displayed correctly. | PASS| 
+| Profile page - | Click 'edit profile button. | Edit profile form is displayed. | PASS| 
+| Profile page - | Fill out edit profile form and submit. | User info is updated correctly. | PASS| 
+| Logout page - | Click logout link. | User is logged out correctly and message displays confirming this. | PASS| 
 | Responsiveness - UX | Resize site for all device sizes. | Check that images/text/other elements resize as expected, text should be readable and elements should all be visible and not overlap randomly. Repeat for every page. | PASS|
 
 ## Lighthouse testing
@@ -281,7 +281,32 @@ JS validator used: [JS validator](https://jshint.com/)
 
 ## Browser testing
 | Browser:     | Screenshot:                       | Notes:  | 
-|:----------|:--------------------------------------------------------------------------|:--------|
+|:----------|:------------------------------------------------------|:--------|
 | Chrome | ![chrome test](documentation/browser-testing/chrome.png) | No errors |
 | Firefox | ![firefox test](documentation/browser-testing/firefox.png) | No errors |
 | Safari | ![safari test](documentation/browser-testing/safari.png) | No errors |
+
+## Bugs
+
+
+## Languages Used:
+- HTML used for the main site content.
+- CSS used for the main site design and layout.
+- JavaScript used for user interaction on the site.
+- Python used as the back-end programming language.
+
+## Technologies Used:
+- Git used for version control. (git add, git commit, git push)
+- GitHub used for secure online code storage.
+- Gitpod used as a cloud-based IDE for development.
+- Bootstrap used as the front-end framework for modern responsiveness and pre-built components.
+- Django used as the Python framework for the site.
+- PostgreSQL used as the relational database management.
+- ElephantSQL used as the Postgres database.
+- Heroku used for hosting the deployed site.
+- Cloudinary used for online static file storage.
+- Pillow used for image processing
+- Gunicorn used for WSGI server
+- Coolor: I used coolor.co to generate a colour palette.
+- Font Awesome: was used to import icons into the footer for the social media links.
+- Google Fonts: was used to customise the fonts of the site.
