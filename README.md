@@ -288,6 +288,22 @@ JS validator used: [JS validator](https://jshint.com/)
 
 ## Bugs
 
+### Incorrect post key:
+<int:pk> post key number not as expected bc I had deleted posts previously. So url post/2 not post/1.
+![bug1](documentation/bugs/bug-1.png)
+![bug1](documentation/bugs/bug-2.png)
+![bug1](documentation/bugs/bug-3.png)
+
+### Incorrect profile pictures showing
+I had to use an if/else logic statement to ensure the correct image showed for the relevant profile.
+![bug2](documentation/bugs/bug-4.png)
+
+### Terminal error preventing me from opening local port
+A problem in the terminal said import wasn't being used so I deleted, env.py file was then not being imported so terminal error thrown. Replacing the code fixed the error.
+![bug3](documentation/bugs/bug-5.png)
+![bug3](documentation/bugs/bug-6.png)
+
+No unfixed bugs I am aware of.
 
 ## Languages Used:
 - HTML used for the main site content.
