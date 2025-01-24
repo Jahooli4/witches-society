@@ -326,3 +326,4 @@ No unfixed bugs I am aware of.
 - Coolor: I used coolor.co to generate a colour palette.
 - Font Awesome: was used to import icons into the footer for the social media links.
 - Google Fonts: was used to customise the fonts of the site.
+
