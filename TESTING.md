@@ -1,6 +1,6 @@
-## Testing
+# Testing
 
-### User testing
+## User testing
 | Feature being tested:| Steps                                | Expected outcome  | Pass/Fail |
 |:---------------------|:-------------------------------------|:------------------|-----|
 | Navigation - Logo | Click the logo on every page. | The logo should link the user back to the homepage, should be active on every page. | PASS |
@@ -157,26 +157,3 @@ A problem in the terminal said import wasn't being used so I deleted, env.py fil
 ![bug3](documentation/bugs/bug-6.png)
 
 No unfixed bugs I am aware of.
-
-## Languages Used:
-- HTML used for the main site content.
-- CSS used for the main site design and layout.
-- JavaScript used for user interaction on the site.
-- Python used as the back-end programming language.
-
-## Technologies Used:
-- Git used for version control. (git add, git commit, git push)
-- GitHub used for secure online code storage.
-- Gitpod used as a cloud-based IDE for development.
-- Bootstrap used as the front-end framework for modern responsiveness and pre-built components.
-- Django used as the Python framework for the site.
-- PostgreSQL used as the relational database management.
-- ElephantSQL used as the Postgres database.
-- Heroku used for hosting the deployed site.
-- Cloudinary used for online static file storage.
-- Pillow used for image processing
-- Gunicorn used for WSGI server
-- Coolor: I used coolor.co to generate a colour palette.
-- Font Awesome: was used to import icons into the footer for the social media links.
-- Google Fonts: was used to customise the fonts of the site.
-- amiresponsive: used to generate screenshots at beginning of readme.

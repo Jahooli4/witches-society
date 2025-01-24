@@ -21,6 +21,16 @@ After researching into similar existing witch themed sites I decided to opt for 
 
 User stories can be found [here](https://github.com/users/Jahooli4/projects/4/views/1) via my gitHub project.
 
+## Wireframes
+### Home:
+![Home page](documentation/wireframes/home.png)
+### About:
+![About page](documentation/wireframes/about.png)
+### Blog:
+![Blog page](documentation/wireframes/blog.png)
+### Login:
+![Login page](documentation/wireframes/login.png)
+
 ## Structure Plane
 
 ### Home page:
@@ -145,6 +155,15 @@ Alerts users that they have successfully logged out.
 ### Blog page
 - Once the blog is established and has a lot more posts it would be handy to be able to filter the posts by theme.
 
+## Database design
+During the planning stages of this project I made an Entity Relationship Diagram to help visualise the database models and the way they relate to one another.
+
+![dbd database design](documentation/dbd-databasedesign.png)
+
+## Testing
+
+Click here for my testing file: [Testing](TESTING.md)
+
 ## Deployment
 ### ElephantSQL Database
 
@@ -259,7 +278,7 @@ You can clone the repository by following these steps:
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://github.com/Jahooli4/witches-society)
+[Open in Gitpod](https://github.com/Jahooli4/witches-society)
 
 Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
 A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
@@ -272,6 +291,31 @@ You can fork this repository by using the following steps:
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Jahooli4/witches-society)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+
+
+## Languages Used:
+- HTML used for the main site content.
+- CSS used for the main site design and layout.
+- JavaScript used for user interaction on the site.
+- Python used as the back-end programming language.
+
+## Technologies Used:
+- [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
+- [GitHub](https://github.com) used for secure online code storage.
+- [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
+- [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
+- [Django](https://www.djangoproject.com) used as the Python framework for the site.
+- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
+- [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
+- [Heroku](https://www.heroku.com) used for hosting the deployed site.
+- [Cloudinary](https://cloudinary.com) used for online static file storage.
+- [Pillow](https://pypi.org/project/Pillow/) used for image processing
+- [Gunicorn](https://gunicorn.org/) used for WSGI server
+- [Coolers](https://coolors.co/fafafa-333333-6e2937-993e50-f3baba-507e50-507948-304f2a-263e21)
+- [Font awesome](https://fontawesome.com/)
+- [amiresponsive](https://ui.dev/amiresponsive)
+- [google fonts](https://fonts.google.com/)
+
 
 ## Credits
 ### Image sources:
@@ -297,5 +341,5 @@ You can fork this repository by using the following steps:
 - Profile: [JS tutorials w3schools](https://www.w3schools.com/js/default.asp)
 - Home page slideshow: [slideshow hot to: w3schools](https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp)
 - About page flip cards: [How to: flip cards w3schools](https://www.w3schools.com/howto/howto_css_flip_card.asp)
-- Entire site (file structure): [My tutor's project for inspo and tips: Lewis Dillon](https://github.com/LewisMDillon/bushy-park-tennis-club-ld)
+- Entire site (file structure): [My tutor's project for readme inspo and tips: Lewis Dillon](https://github.com/LewisMDillon/bushy-park-tennis-club-ld)
 - Entire site: [Code institute walkthrough](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101N+2024/courseware/713441aba05441dfb3a7cf04f3268b3f/824fccecd0fe4e44871eeabcbf69d830/)
