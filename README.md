@@ -326,4 +326,159 @@ No unfixed bugs I am aware of.
 - Coolor: I used coolor.co to generate a colour palette.
 - Font Awesome: was used to import icons into the footer for the social media links.
 - Google Fonts: was used to customise the fonts of the site.
+- amiresponsive: used to generate screenshots at beginning of readme.
 
+## Deployment
+### ElephantSQL Database
+
+This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
+
+To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
+- Click **Create New Instance** to start a new database.
+- Provide a name (this is commonly the name of the project: witches-society).
+- Select the **Tiny Turtle (Free)** plan.
+- You can leave the **Tags** blank.
+- Select the **Region** and **Data Center** closest to you.
+- Once created, click on the new database name, where you can view the database URL and Password.
+
+### Cloudinary API
+
+This project uses the [Cloudinary API](https://cloudinary.com) to store media assets online, due to the fact that Heroku doesn't persist this type of data.
+
+To obtain your own Cloudinary API key, create an account and log in.
+- For *Primary interest*, you can choose *Programmable Media for image and video API*.
+- Optional: *edit your assigned cloud name to something more memorable*.
+- On your Cloudinary Dashboard, you can copy your **API Environment Variable**.
+- Be sure to remove the `CLOUDINARY_URL=` as part of the API **value**; this is the **key**.
+
+### Heroku Deployment
+
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+Deployment steps are as follows, after account setup:
+
+- Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
+- From the new app **Settings**, click **Reveal Config Vars**, and set your environment variables.
+
+| Key | Value |
+| --- | --- |
+| `CLOUDINARY_URL` | user's own value |
+| `DATABASE_URL` | user's own value |
+| `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
+| `SECRET_KEY` | user's own value |
+
+Heroku needs two additional files in order to deploy properly.
+- requirements.txt
+- Procfile
+
+You can install this project's **requirements** (where applicable) using:
+- `pip3 install -r requirements.txt`
+
+If you have your own packages that have been installed, then the requirements file needs updated using:
+- `pip3 freeze --local > requirements.txt`
+
+The **Procfile** can be created with the following command:
+- `echo web: gunicorn app_name.wsgi > Procfile`
+- *replace **app_name** with the name of your primary Django app name; the folder where settings.py is located*
+
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+
+Either:
+- Select **Automatic Deployment** from the Heroku app.
+
+Or:
+- In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
+- Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
+- After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
+	- `git push heroku main`
+
+The project should now be connected and deployed to Heroku!
+
+### Local Deployment
+
+This project can be cloned or forked in order to make a local copy on your own system.
+
+For either method, you will need to install any applicable packages found within the *requirements.txt* file.
+- `pip3 install -r requirements.txt`.
+
+You will need to create a new file called `env.py` at the root-level,
+and include the same environment variables listed above from the Heroku deployment steps.
+
+Sample `env.py` file:
+
+```python
+import os
+
+os.environ.setdefault("CLOUDINARY_URL", "user's own value")
+os.environ.setdefault("DATABASE_URL", "user's own value")
+os.environ.setdefault("SECRET_KEY", "user's own value")
+
+# local environment only (do not include these in production/deployment!)
+os.environ.setdefault("DEBUG", "True")
+```
+
+Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:
+- Start the Django app: `python3 manage.py runserver`
+- Stop the app once it's loaded: `CTRL+C` or `⌘+C` (Mac)
+- Make any necessary migrations: `python3 manage.py makemigrations`
+- Migrate the data to the database: `python3 manage.py migrate`
+- Create a superuser: `python3 manage.py createsuperuser`
+- Load fixtures (if applicable): `python3 manage.py loaddata file-name.json` (repeat for each file)
+- Everything should be ready now, so run the Django app again: `python3 manage.py runserver`
+
+#### Cloning
+
+You can clone the repository by following these steps:
+
+1. Go to the [GitHub repository](https://github.com/Jahooli4/witches-society) 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash or Terminal
+5. Change the current working directory to the one where you want the cloned directory
+6. In your IDE Terminal, type the following command to clone my repository:
+	- `git clone https://github.com/Jahooli4/witches-society`
+7. Press Enter to create your local clone.
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://github.com/Jahooli4/witches-society)
+
+Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
+A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+
+#### Forking
+
+By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
+You can fork this repository by using the following steps:
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Jahooli4/witches-society)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+
+## Credits
+### Image sources:
+- [Hero image 1](https://www.freepik.com/free-photo/numerology-concept-still-life_38171481.htm#fromView=search&page=2&position=25&uuid=9cb45039-d237-4dd0-9813-9836eafbf9ba&new_detail=true&query=flatlay+spell)
+- [Hero image 2](https://www.freepik.com/free-photo/top-view-ouija-board-candles_28694022.htm#fromView=search&page=2&position=10&uuid=c90625fa-07de-464a-b027-2b4016878d61&new_detail=true&query=flatlay+tarot)
+- [Hero image 3](https://www.freepik.com/free-photo/top-view-esoteric-items-arrangement_29301134.htm#fromView=search&page=1&position=10&uuid=de4fe655-e659-4da1-acbf-2a525ab6eb47&new_detail=true&query=flatlay+spell)
+- [tarot flip car 1](https://www.freepik.com/free-vector/hand-drawn-tarot-cards-illustration_38600065.htm#fromView=search&page=1&position=10&uuid=a2855599-f34c-47b2-8db8-521ecdb76283&new_detail=true&query=pink+tarot)
+- [tarot flip car 2](https://www.freepik.com/free-vector/hand-drawn-tarot-cards-illustration_38600025.htm#fromView=search&page=1&position=0&uuid=a2855599-f34c-47b2-8db8-521ecdb76283&new_detail=true&query=pink+tarot)
+- [tarot flip car 3](https://www.freepik.com/free-vector/hand-drawn-tarot-cards-illustration_38600023.htm#fromView=search&page=1&position=2&uuid=a2855599-f34c-47b2-8db8-521ecdb76283&new_detail=true&query=pink+tarot)
+
+### Blog content sources:
+- [Mage by moonlight](https://magebymoonlight.com/witch-hunts-antisemitism/)
+- [Ouija](https://spiru.com/ouija-how-to-play-the-spirit-board/)
+- [Llewellyn](https://www.llewellyn.com/journal/article/2835?srsltid=AfmBOoqeoBl8Um0opdDgI4xb4qhIyoshzR8KqlNbvw2VC2FPHj2OQ2rD)
+- [Simply exist magickally](https://naturallymodernlife.com/making-incense-for-witchcraft/)
+- [Simply exist magickally](https://naturallymodernlife.com/the-beaver-moon-witchy-ways-to-celebrate/)
+- [True hauntings](https://truehauntings.com/trueghoststories/how-to-make-a-voodoo-doll)
+- [Witch casket](https://witchcasket.co.uk/blog/)
+
+### Tutorials and resources referenced to build site:
+- Entire site: [Django documentation](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#ref-templates-builtins-tags)
+- Entire site: [Youtube Blog tutorials](https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p)
+- Profile: [JS tutorials w3schools](https://www.w3schools.com/js/default.asp)
+- Home page slideshow: [slideshow hot to: w3schools](https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp)
+- About page flip cards: [How to: flip cards w3schools](https://www.w3schools.com/howto/howto_css_flip_card.asp)
+- Entire site (file structure): [My tutor's project for inspo and tips: Lewis Dillon](https://github.com/LewisMDillon/bushy-park-tennis-club-ld)
+- Entire site: [Code institute walkthrough](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101N+2024/courseware/713441aba05441dfb3a7cf04f3268b3f/824fccecd0fe4e44871eeabcbf69d830/)
