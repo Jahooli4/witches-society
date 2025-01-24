@@ -14,6 +14,9 @@ from pathlib import Path
 import os
 import dj_database_url
 
+if os.path.isfile('env.py'):
+    import env
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-j5zdq-&$^6k2xbgw7#-#8l8unz427xy=5&joi%y8h7(34jj8*w'
+SECRET_KEY = 'django-insecure-j5zdq-&$^6k2xbgw7#-#8l8unz427xy=5&joi%y8h7(34jj8*w'   # noqa
 
 # SECURITY WARNING: don't run with debug turned on!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-jahooli4-witchessociety-2zuk11im7oe.ws.codeinstitute-ide.net',
@@ -92,7 +95,7 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa
     },
     {
         'NAME':

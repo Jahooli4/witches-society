@@ -198,7 +198,7 @@ ul {
 
 /* -------- BLOG PAGE -------- */
 .content-section {
-  background: #f3baba;
+  background: #f6c2c2;
   padding: 10px 20px;
   border: 1px solid #dddddd;
   border-radius: 3px;
@@ -258,6 +258,22 @@ a.article-title:hover {
 .blog-post-image {
   object-fit: cover;
   overflow: hidden;
+}
+
+.back-text {
+  background-color: #6e2937;
+}
+
+.back-text a {
+  color: #fafafa;
+}
+
+.back-text a:hover {
+  color: #6e2937;
+}
+
+.back-text:hover {
+  background-color: #f3baba;
 }
 
 /* -------- PROFILE PAGE -------- */
@@ -343,7 +359,7 @@ a.article-title:hover {
   color: #fafafa;
 }
 
-#social-icons li a {
+#social-icons li a i {
   color: #fafafa;
 }
 

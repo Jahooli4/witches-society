@@ -237,7 +237,6 @@ CSS validator used: [CSS validator](https://jigsaw.w3.org/css-validator/)
 
 ![CSS validator](documentation/css-validator.png)
 
-
 ## JS Testing:
 
 JS validator used: [JS validator](https://jshint.com/)
@@ -252,3 +251,37 @@ JS validator used: [JS validator](https://jshint.com/)
 ## Python testing
  Python validator used [Python validator](https://pep8ci.herokuapp.com/)
 
+### Validation for witches_society app:
+| File:     | Screenshot:                       | Notes:  | 
+|:----------|:--------------------------------------------------------------------------|:--------|
+| asgi.py   | ![asgi.py validation](documentation/py-validation/asgi.py-validation.png) | No errors |
+| settings.py | ![settings.py validation](documentation/py-validation/settings.py-validation.png) | No errors |
+| urls.py | ![urls.py validation](documentation/py-validation/urls.py-validation.png) | No errors |
+| wsgi.py | ![wsgi.py validation](documentation/py-validation/wsgi.py-validation.png) | No errors |
+
+### Validation for website app:
+| File:     | Screenshot:                       | Notes:  | 
+|:----------|:--------------------------------------------------------------------------|:--------|
+| admin.py  | ![admin.py validation](documentation/py-validation/admin.py-website.png) | No errors |
+| apps.py | ![apps.py validation](documentation/py-validation/apps.py-website.png) | No errors |
+| models.py | ![models.py validation](documentation/py-validation/models.py-website.png) | No errors |
+| urls.py | ![urls.py validation](documentation/py-validation/urls.py-website.png) | No errors |
+| views.py | ![views.py validation](documentation/py-validation/views.py-wesbite.png) | No errors |
+
+### Validation for users app:
+| File:     | Screenshot:                       | Notes:  | 
+|:----------|:--------------------------------------------------------------------------|:--------|
+| admin.py  | ![admin.py validation](documentation/py-validation/admin.py-users.png) | No errors |
+| apps.py | ![apps.py validation](documentation/py-validation/apps.py-users.png) | No errors |
+| forms.py | ![forms.py validation](documentation/py-validation/forms.py-users.png) | No errors |
+| models.py | ![models.py validation](documentation/py-validation/models.py-users.png) | No errors |
+| signals.py | ![signals.py validation](documentation/py-validation/signals.py-users.png) | No errors |
+| urls.py | ![urls.py validation](documentation/py-validation/signals.py-users.png) | No errors |
+| views.py | ![views.py validation](documentation/py-validation/views.py-users.png) | No errors |
+
+## Browser testing
+| Browser:     | Screenshot:                       | Notes:  | 
+|:----------|:--------------------------------------------------------------------------|:--------|
+| Chrome | ![chrome test](documentation/browser-testing/chrome.png) | No errors |
+| Firefox | ![firefox test](documentation/browser-testing/firefox.png) | No errors |
+| Safari | ![safari test](documentation/browser-testing/safari.png) | No errors |
